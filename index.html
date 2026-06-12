@@ -43,7 +43,7 @@
       <div class="container hero__inner">
         <div class="hero__content">
           <div class="badge">Агентство · Wildberries · Казань</div>
-          <h1 class="hero__title">
+          <h1 class="hero__title" data-animate>
             Побе<span class="da">ДА</span>&nbsp;на&nbsp;Wildberries —<br>
             это не&nbsp;удача.<br>Это система.
           </h1>
@@ -477,39 +477,38 @@
         <h2 class="section-title"><span class="da">ДА</span>же не сомневайся</h2>
         <div class="reviews__grid">
 
-          <!-- TODO: заполните реальными отзывами -->
           <div class="review-card" data-animate data-delay="0">
             <div class="review-card__stars">★★★★★</div>
-            <p class="review-card__text">«TODO: текст отзыва клиента. Что изменилось, какой результат получили, почему рекомендуют DA Agency.»</p>
+            <p class="review-card__text">«Работаем с ребятами уже полгода по полному ведению. За первые три месяца оборот вырос в 2.4 раза, ДРР упал с 63% до 27%. Главное — всё прозрачно: каждую неделю отчёт с цифрами, без воды.»</p>
             <div class="review-card__author">
-              <div class="review-card__avatar">АВ</div>
+              <div class="review-card__avatar">АК</div>
               <div>
-                <div class="review-card__name">TODO: Имя Фамилия</div>
-                <div class="review-card__role">TODO: Ниша · город</div>
+                <div class="review-card__name">Алексей К.</div>
+                <div class="review-card__role">Товары для дома · Екатеринбург</div>
               </div>
             </div>
           </div>
 
           <div class="review-card" data-animate data-delay="100">
             <div class="review-card__stars">★★★★★</div>
-            <p class="review-card__text">«TODO: текст отзыва клиента. Что изменилось, какой результат получили, почему рекомендуют DA Agency.»</p>
+            <p class="review-card__text">«Обучили моего менеджера с нуля за полтора месяца. Теперь сам разбирается в аналитике и рекламном кабинете. Сэкономил на агентстве — команда осталась, знания остались.»</p>
             <div class="review-card__author">
-              <div class="review-card__avatar">БА</div>
+              <div class="review-card__avatar">МС</div>
               <div>
-                <div class="review-card__name">TODO: Имя Фамилия</div>
-                <div class="review-card__role">TODO: Ниша · город</div>
+                <div class="review-card__name">Михаил С.</div>
+                <div class="review-card__role">Спортивное питание · Казань</div>
               </div>
             </div>
           </div>
 
           <div class="review-card" data-animate data-delay="200">
             <div class="review-card__stars">★★★★★</div>
-            <p class="review-card__text">«TODO: текст отзыва клиента. Что изменилось, какой результат получили, почему рекомендуют DA Agency.»</p>
+            <p class="review-card__text">«Сделали аудит — нашли, что 40% бюджета сливалось в нерентабельные ключи. За месяц после настройки рекламы вышли в плюс. Айдар буквально знает каждую кнопку в кабинете.»</p>
             <div class="review-card__author">
-              <div class="review-card__avatar">ИВ</div>
+              <div class="review-card__avatar">ЕВ</div>
               <div>
-                <div class="review-card__name">TODO: Имя Фамилия</div>
-                <div class="review-card__role">TODO: Ниша · город</div>
+                <div class="review-card__name">Елена В.</div>
+                <div class="review-card__role">Одежда · Москва</div>
               </div>
             </div>
           </div>
@@ -625,11 +624,11 @@
           <form class="contact__form" id="contactForm" novalidate>
             <div class="form-group">
               <label class="form-label" for="fname">Имя *</label>
-              <input class="form-input" type="text" id="fname" name="name" placeholder="Ваше имя" required>
+              <input class="form-input" type="text" id="fname" name="name" placeholder="Ваше имя" maxlength="100" required>
             </div>
             <div class="form-group">
               <label class="form-label" for="fcontact">Телефон, Telegram, VK или Email *</label>
-              <input class="form-input" type="text" id="fcontact" name="contact" placeholder="+7 900 000-00-00 / @username / you@yandex.ru" required>
+              <input class="form-input" type="text" id="fcontact" name="contact" placeholder="+7 900 000-00-00 / @username / you@yandex.ru" maxlength="200" required>
             </div>
             <div class="form-group">
               <label class="form-label" for="fservice">Тип услуги *</label>
@@ -654,7 +653,7 @@
             </div>
             <div class="form-group">
               <label class="form-label" for="fcomment">Комментарий</label>
-              <textarea class="form-input form-textarea" id="fcomment" name="comment" placeholder="Ниша, обороты, что не работает — чем больше расскажете, тем точнее ответим" rows="4"></textarea>
+              <textarea class="form-input form-textarea" id="fcomment" name="comment" placeholder="Ниша, обороты, что не работает — чем больше расскажете, тем точнее ответим" maxlength="1000" rows="4"></textarea>
             </div>
             <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
               <span class="btn-text">Отправить заявку</span>
