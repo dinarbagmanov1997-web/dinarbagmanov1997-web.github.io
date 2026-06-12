@@ -176,6 +176,24 @@ function sanitize(str) {
   return String(str).replace(/<[^>]*>/g, '').trim().slice(0, 1000);
 }
 
+// ===== ПАРАЛЛАКС СИЛУЭТОВ =====
+const parallaxHeroes = document.querySelectorAll('.parallax-hero');
+
+if (parallaxHeroes.length) {
+  let rafId = null;
+  window.addEventListener('scroll', () => {
+    if (rafId) return;
+    rafId = requestAnimationFrame(() => {
+      const y = window.scrollY;
+      parallaxHeroes.forEach((el, i) => {
+        const speed = i === 0 ? 0.13 : 0.08;
+        el.style.transform = `translateY(${-y * speed}px)`;
+      });
+      rafId = null;
+    });
+  }, { passive: true });
+}
+
 // ===== АКТИВНЫЙ ПУНКТ НАВИГАЦИИ ПРИ СКРОЛЛЕ =====
 const navLinks = document.querySelectorAll('.nav__link');
 const sections = document.querySelectorAll('section[id]');

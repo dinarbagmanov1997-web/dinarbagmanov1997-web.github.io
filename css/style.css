@@ -75,6 +75,36 @@ img { display: block; max-width: 100%; }
 button { cursor: pointer; border: none; background: none; font-family: inherit; }
 ul { list-style: none; }
 
+/* ===== PARALLAX HERO SILHOUETTES ===== */
+.parallax-heroes {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.parallax-hero {
+  position: absolute;
+  bottom: -8%;
+  color: var(--accent);
+  will-change: transform;
+  transition: transform 0.05s linear;
+}
+
+.parallax-hero--left {
+  left: -1%;
+  width: clamp(180px, 20vw, 320px);
+  opacity: 0.04;
+}
+
+.parallax-hero--right {
+  right: 0%;
+  width: clamp(130px, 14vw, 240px);
+  bottom: -14%;
+  opacity: 0.025;
+}
+
 /* ===== ЗЕРНО / ШУМ ===== */
 .grain-overlay {
   position: fixed;
@@ -889,6 +919,29 @@ body::after {
   line-height: 1.5;
 }
 .team-card__bio { font-size: 14px; color: var(--text-muted); line-height: 1.65; }
+
+.team-card__facts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.team-card__facts li {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.55;
+  padding-left: 18px;
+  position: relative;
+}
+.team-card__facts li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 8px;
+  height: 1px;
+  background: var(--accent);
+  border-radius: 2px;
+}
 .team-card__tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 4px; }
 
 /* ===== КОНТАКТ / ФОРМА ===== */
