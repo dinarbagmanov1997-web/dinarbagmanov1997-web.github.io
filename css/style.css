@@ -40,6 +40,18 @@
   --shadow-accent: 0 0 24px var(--accent-glow), 0 0 48px var(--accent-dim);
 }
 
+/* Ambient glow spots */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 800px 600px at 75% 10%, rgba(229,57,53,0.055) 0%, transparent 70%),
+    radial-gradient(ellipse 600px 500px at 15% 85%, rgba(229,57,53,0.035) 0%, transparent 65%);
+  pointer-events: none;
+  z-index: 0;
+}
+
 /* ===== RESET & BASE ===== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -142,6 +154,19 @@ h1, h2, h3, h4 {
 .btn--full {
   width: 100%;
   justify-content: center;
+}
+
+/* Top accent bar */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, var(--accent) 40%, var(--accent) 60%, transparent 100%);
+  z-index: 9999;
+  opacity: 0.7;
 }
 
 /* ===== ШАПКА ===== */
@@ -269,6 +294,9 @@ h1, h2, h3, h4 {
   align-items: center;
   overflow: hidden;
   padding: 120px 0 80px;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
 }
 
 /* Гигантский DA-текст на фоне */
@@ -309,7 +337,7 @@ h1, h2, h3, h4 {
 
 .hero__sub {
   font-size: clamp(16px, 2vw, 19px);
-  color: var(--text-muted);
+  color: #9a9a9a;
   margin-bottom: 40px;
   line-height: 1.7;
 }
@@ -345,6 +373,11 @@ h1, h2, h3, h4 {
   color: var(--text-muted);
 }
 
+.hero__stat + .hero__stat {
+  padding-left: 40px;
+  border-left: 1px solid var(--border);
+}
+
 /* Декоративный SVG-город */
 .hero__visual {
   display: flex;
@@ -358,6 +391,22 @@ h1, h2, h3, h4 {
   filter: drop-shadow(0 0 40px var(--accent-dim));
 }
 
+.hero__visual::before {
+  content: '';
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  background: radial-gradient(circle, rgba(229,57,53,0.18) 0%, transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+.hero__visual { position: relative; }
+.hero__svg { position: relative; z-index: 1; }
+
 /* Декоративная линия под hero */
 .hero__line {
   position: absolute;
@@ -369,8 +418,20 @@ h1, h2, h3, h4 {
   opacity: 0.4;
 }
 
+/* Premium gradient on accent spans in headings */
+.section-title .da,
+.hero__title .da,
+.contact__title .da {
+  background: linear-gradient(135deg, var(--accent) 0%, color-mix(in srgb, var(--accent) 70%, #ff8a80) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 /* ===== БОЛИ ===== */
-.pain { background: var(--bg-2); }
+.pain {
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 8%, var(--bg-2) 92%, var(--bg) 100%);
+}
 
 .pain__grid {
   display: grid;
@@ -389,6 +450,7 @@ h1, h2, h3, h4 {
 .pain__card:hover {
   border-color: var(--accent);
   transform: translateY(-4px);
+  box-shadow: 0 0 0 1px var(--accent), 0 8px 32px rgba(229,57,53,0.12);
 }
 
 .pain__icon {
@@ -434,11 +496,13 @@ h1, h2, h3, h4 {
 }
 .service-card--main:hover {
   border-color: var(--border-light);
+  box-shadow: 0 4px 40px rgba(0,0,0,0.4);
 }
 
 .service-card--featured {
   border-color: var(--accent) !important;
-  box-shadow: 0 0 0 1px var(--accent), 0 8px 40px var(--accent-dim);
+  box-shadow: 0 0 0 1px var(--accent), 0 8px 40px var(--accent-dim), inset 0 1px 0 rgba(255,255,255,0.04);
+  background: linear-gradient(160deg, #1a1010 0%, var(--bg-card) 60%);
 }
 
 .service-card__badge {
@@ -543,8 +607,9 @@ h1, h2, h3, h4 {
   transition: border-color 0.2s, background 0.2s;
 }
 .spot-card:hover {
-  border-color: var(--border-light);
+  border-color: var(--accent);
   background: var(--bg-card-hover);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 40%, transparent);
 }
 
 .spot-card__icon {
@@ -567,7 +632,9 @@ h1, h2, h3, h4 {
 }
 
 /* ===== КЕЙСЫ ===== */
-.cases { background: var(--bg-2); }
+.cases {
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 8%, var(--bg-2) 92%, var(--bg) 100%);
+}
 
 .cases__grid {
   display: grid;
@@ -656,8 +723,9 @@ h1, h2, h3, h4 {
   transition: border-color 0.25s, transform 0.25s;
 }
 .client-logo:hover {
-  border-color: var(--border-light);
+  border-color: var(--accent);
   transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(229,57,53,0.1);
 }
 .client-logo__name {
   font-family: var(--font-head);
@@ -676,7 +744,9 @@ h1, h2, h3, h4 {
 }
 
 /* ===== ОТЗЫВЫ ===== */
-.reviews { background: var(--bg-2); }
+.reviews {
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 8%, var(--bg-2) 92%, var(--bg) 100%);
+}
 
 .reviews__grid {
   display: grid;
@@ -727,6 +797,10 @@ h1, h2, h3, h4 {
 }
 .review-card__role { font-size: 12px; color: var(--text-muted); }
 
+.reviews--hidden {
+  display: none;
+}
+
 /* ===== КОМАНДА ===== */
 .team { background: var(--bg); }
 
@@ -752,12 +826,23 @@ h1, h2, h3, h4 {
 .team-card:hover { border-color: var(--border-light); }
 
 .team-card__photo {
-  background: var(--bg-2);
+  background: linear-gradient(180deg, #0d0d0d 0%, var(--bg-2) 100%);
   height: 260px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   overflow: hidden;
+  position: relative;
+}
+.team-card__photo::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(0deg, rgba(229,57,53,0.08) 0%, transparent 100%);
+  pointer-events: none;
 }
 .team-card__silhouette {
   width: 100%;
@@ -807,7 +892,9 @@ h1, h2, h3, h4 {
 .team-card__tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 4px; }
 
 /* ===== КОНТАКТ / ФОРМА ===== */
-.contact { background: var(--bg-2); }
+.contact {
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 8%, var(--bg-2) 92%, var(--bg) 100%);
+}
 
 .contact__inner {
   display: grid;
@@ -1105,3 +1192,9 @@ h1, h2, h3, h4 {
   .container { padding: 0 16px; }
   .hero__title { font-size: 30px; }
 }
+
+/* ===== СКРОЛЛБАР ===== */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
