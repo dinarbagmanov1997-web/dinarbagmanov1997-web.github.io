@@ -1,22 +1,575 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bagmanov AI Publisher</title>
-<style>
-  body { font-family: Georgia, serif; max-width: 800px; margin: 60px auto; padding: 0 24px; color: #222; line-height: 1.8; text-align: center; }
-  h1 { font-size: 40px; margin-bottom: 8px; letter-spacing: 2px; }
-  p { color: #666; font-size: 18px; }
-  a { color: #c0392b; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DA Group — агентство сопровождения на Wildberries</title>
+  <meta name="description" content="Ведём магазины на Wildberries под ключ и обучаем менеджеров. ДРР вниз, оборот вверх — с цифрами на руках.">
+  <meta property="og:title" content="DA Group — агентство сопровождения на Wildberries">
+  <meta property="og:description" content="Ведём магазины под ключ и обучаем менеджеров. ДРР вниз, оборот вверх.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<h1>BAGMANOV AI PUBLISHER</h1>
-<p>AI-powered fashion content publishing tool for Pinterest.</p>
-<p>Automated editorial image generation and publishing for menswear brands.</p>
-<br>
-<p><a href="/privacy.html">Privacy Policy</a></p>
-<p>Contact: <a href="mailto:dinarbagmanov1997@gmail.com">dinarbagmanov1997@gmail.com</a></p>
+
+  <!-- Зернистый оверлей (нуар-эстетика) -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- ========== ШАПКА ========== -->
+  <header class="site-header" id="top">
+    <div class="container header__inner">
+      <a href="#top" class="logo">
+        <span class="da">DA</span>&nbsp;Group
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#services" class="nav__link">Услуги</a>
+        <a href="#cases" class="nav__link">Кейсы</a>
+        <a href="#team" class="nav__link">Команда</a>
+        <a href="#contact" class="btn btn--sm">Оставить заявку</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ========== 1. HERO ========== -->
+    <section class="hero" id="hero">
+      <div class="hero__bg-letters" aria-hidden="true">DA</div>
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <div class="badge">Агентство · Wildberries · Казань</div>
+          <h1 class="hero__title">
+            Побе<span class="da">ДА</span>&nbsp;на&nbsp;Wildberries —<br>
+            это не&nbsp;удача.<br>Это система.
+          </h1>
+          <p class="hero__sub">
+            Ведём магазины под ключ и обучаем менеджеров.<br>
+            ДРР вниз, оборот вверх — с цифрами на руках.
+          </p>
+          <div class="hero__actions">
+            <a href="#contact" class="btn btn--primary">Оставить заявку</a>
+            <a href="#services" class="btn btn--ghost">Наши услуги</a>
+          </div>
+          <div class="hero__stats">
+            <div class="hero__stat">
+              <!-- TODO: обновить цифры -->
+              <span class="hero__stat-val">47<span class="da">+</span></span>
+              <span class="hero__stat-label">магазинов в работе</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-val">2.3<span class="da">×</span></span>
+              <span class="hero__stat-label">средний рост оборота</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-val"><span class="da">−38%</span></span>
+              <span class="hero__stat-label">снижение ДРР</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero__visual" aria-hidden="true">
+          <svg class="hero__svg" viewBox="0 0 420 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Декоративный абстрактный элемент: город-силуэт -->
+            <defs>
+              <linearGradient id="cityGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.25"/>
+                <stop offset="100%" stop-color="var(--accent)" stop-opacity="0"/>
+              </linearGradient>
+              <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="var(--accent)" stop-opacity="0"/>
+                <stop offset="50%" stop-color="var(--accent)" stop-opacity="0.8"/>
+                <stop offset="100%" stop-color="var(--accent)" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <!-- Силуэт зданий -->
+            <rect x="20" y="300" width="40" height="180" fill="#1e1e1e"/>
+            <rect x="30" y="260" width="20" height="40" fill="#1e1e1e"/>
+            <rect x="35" y="245" width="10" height="15" fill="#242424"/>
+            <rect x="70" y="240" width="60" height="240" fill="#1a1a1a"/>
+            <rect x="80" y="210" width="40" height="30" fill="#1a1a1a"/>
+            <rect x="140" y="280" width="35" height="200" fill="#202020"/>
+            <rect x="185" y="200" width="80" height="280" fill="#1e1e1e"/>
+            <rect x="200" y="170" width="50" height="30" fill="#222"/>
+            <rect x="215" y="155" width="20" height="15" fill="#2a2a2a"/>
+            <rect x="275" y="260" width="50" height="220" fill="#1c1c1c"/>
+            <rect x="285" y="230" width="30" height="30" fill="#1c1c1c"/>
+            <rect x="335" y="310" width="70" height="170" fill="#1e1e1e"/>
+            <rect x="345" y="270" width="50" height="40" fill="#1e1e1e"/>
+            <rect x="360" y="250" width="20" height="20" fill="#242424"/>
+            <!-- Окна светящиеся -->
+            <rect x="195" y="220" width="8" height="8" fill="var(--accent)" opacity="0.6" rx="1"/>
+            <rect x="210" y="220" width="8" height="8" fill="var(--accent)" opacity="0.3" rx="1"/>
+            <rect x="225" y="220" width="8" height="8" fill="var(--accent)" opacity="0.5" rx="1"/>
+            <rect x="195" y="240" width="8" height="8" fill="var(--accent)" opacity="0.2" rx="1"/>
+            <rect x="225" y="240" width="8" height="8" fill="var(--accent)" opacity="0.4" rx="1"/>
+            <rect x="80" y="255" width="6" height="6" fill="var(--accent)" opacity="0.4" rx="1"/>
+            <rect x="95" y="255" width="6" height="6" fill="var(--accent)" opacity="0.2" rx="1"/>
+            <rect x="290" y="270" width="6" height="6" fill="var(--accent)" opacity="0.5" rx="1"/>
+            <rect x="305" y="270" width="6" height="6" fill="var(--accent)" opacity="0.3" rx="1"/>
+            <!-- Горизонтальные линии-развёртки -->
+            <line x1="0" y1="390" x2="420" y2="390" stroke="url(#lineGrad)" stroke-width="0.5" opacity="0.4"/>
+            <line x1="0" y1="410" x2="420" y2="410" stroke="url(#lineGrad)" stroke-width="0.3" opacity="0.2"/>
+            <!-- Акцентный луч сверху вниз -->
+            <line x1="210" y1="0" x2="210" y2="155" stroke="var(--accent)" stroke-width="1" opacity="0.3"/>
+            <circle cx="210" cy="0" r="3" fill="var(--accent)" opacity="0.5"/>
+            <!-- Градиент-подсветка города -->
+            <rect x="0" y="200" width="420" height="280" fill="url(#cityGrad)"/>
+          </svg>
+        </div>
+      </div>
+      <!-- Декоративная линия снизу -->
+      <div class="hero__line" aria-hidden="true"></div>
+    </section>
+
+    <!-- ========== 2. БОЛИ СЕЛЛЕРА ========== -->
+    <section class="pain section" id="pain">
+      <div class="container">
+        <div class="section-label">Узнаёшь себя?</div>
+        <h2 class="section-title">Город спит. Проблемы — нет.</h2>
+        <div class="pain__grid">
+          <div class="pain__card" data-animate data-delay="0">
+            <div class="pain__icon">📉</div>
+            <h3 class="pain__title">Реклама жрёт бюджет</h3>
+            <p class="pain__text">АРК крутится, деньги уходят, а заказов нет. ДРР 60%+ — и непонятно, что с этим делать.</p>
+          </div>
+          <div class="pain__card" data-animate data-delay="100">
+            <div class="pain__icon">🔺</div>
+            <h3 class="pain__title">ДРР только растёт</h3>
+            <p class="pain__text">Каждый новый запуск кампании — дороже предыдущего. Юнитка не сходится, но останавливаться страшно.</p>
+          </div>
+          <div class="pain__card" data-animate data-delay="200">
+            <div class="pain__icon">😤</div>
+            <h3 class="pain__title">Менеджер не справляется</h3>
+            <p class="pain__text">Штатный сотрудник не понимает аналитику, путается в оцифровке, не умеет работать с рекламным кабинетом.</p>
+          </div>
+          <div class="pain__card" data-animate data-delay="300">
+            <div class="pain__icon">📦</div>
+            <h3 class="pain__title">Карточка не в топе</h3>
+            <p class="pain__text">SEO сделано «как у всех», контент слабый, выкупы не настроены. Карточка теряется среди тысяч конкурентов.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 3. УСЛУГИ ========== -->
+    <section class="services section" id="services">
+      <div class="container">
+        <div class="section-label">Что мы делаем</div>
+        <h2 class="section-title">С<span class="da">ДА</span>ём результат,<br>не отчёты</h2>
+
+        <!-- Основная вилка -->
+        <div class="services__main">
+          <div class="service-card service-card--main">
+            <div class="service-card__badge">Старт</div>
+            <div class="service-card__icon">🎓</div>
+            <h3 class="service-card__title">Обучение и сопровождение менеджера</h3>
+            <p class="service-card__desc">
+              Прокачиваем вашего текущего сотрудника до уровня WB-специалиста.
+              Учим работать с аналитикой, рекламным кабинетом, юниткой и оцифровкой.
+              Вы сохраняете команду — мы даём инструмент.
+            </p>
+            <ul class="service-card__list">
+              <li>Диагностика навыков менеджера</li>
+              <li>Персональная программа обучения</li>
+              <li>Работа с реальным магазином</li>
+              <li>Контроль и обратная связь</li>
+              <li>Подключение таблиц оцифровки</li>
+            </ul>
+            <a href="#contact" class="btn btn--primary">Обсудить</a>
+          </div>
+
+          <div class="service-card service-card--main service-card--featured">
+            <div class="service-card__badge service-card__badge--accent">Топ</div>
+            <div class="service-card__icon">🚀</div>
+            <h3 class="service-card__title">Полное ведение магазина под ключ</h3>
+            <p class="service-card__desc">
+              Берём магазин в работу целиком: реклама, SEO, аналитика, контент, оцифровка,
+              стратегия роста. Вы занимаетесь бизнесом — мы занимаемся WB.
+            </p>
+            <ul class="service-card__list">
+              <li>Аудит и стратегия роста</li>
+              <li>Управление рекламным кабинетом</li>
+              <li>SEO-оптимизация карточек</li>
+              <li>Аналитика и оцифровка бизнеса</li>
+              <li>Ежемесячные отчёты с цифрами</li>
+              <li>Личный менеджер на связи</li>
+            </ul>
+            <a href="#contact" class="btn btn--primary">Обсудить</a>
+          </div>
+        </div>
+
+        <!-- Точечные услуги -->
+        <div class="services__spot-label">
+          <span>Точечные услуги</span>
+        </div>
+        <div class="services__spot">
+          <div class="spot-card">
+            <span class="spot-card__icon">🔍</span>
+            <span class="spot-card__title">Аудит магазина</span>
+            <span class="spot-card__desc">Полный разбор текущего состояния: что тормозит рост</span>
+          </div>
+          <div class="spot-card">
+            <span class="spot-card__icon">📊</span>
+            <span class="spot-card__title">Аудит рекламных кабинетов</span>
+            <span class="spot-card__desc">Разбор РК, поиск слива бюджета, рекомендации</span>
+          </div>
+          <div class="spot-card">
+            <span class="spot-card__icon">⚡</span>
+            <span class="spot-card__title">Настройка рекламы</span>
+            <span class="spot-card__desc">АРК, ставки, стратегии под вашу юнитку</span>
+          </div>
+          <div class="spot-card">
+            <span class="spot-card__icon">🔤</span>
+            <span class="spot-card__title">SEO-оптимизация карточек</span>
+            <span class="spot-card__desc">Заголовки, описания, ключи — чтобы карточка нашлась</span>
+          </div>
+          <div class="spot-card">
+            <span class="spot-card__icon">🖼️</span>
+            <span class="spot-card__title">Контент для карточек</span>
+            <span class="spot-card__desc">ТЗ для фотографа и дизайнера, анализ конкурентов</span>
+          </div>
+          <div class="spot-card">
+            <span class="spot-card__icon">📋</span>
+            <span class="spot-card__title">Таблицы оцифровки</span>
+            <span class="spot-card__desc">Внедрение системы управленческого учёта для WB</span>
+          </div>
+          <div class="spot-card">
+            <span class="spot-card__icon">🎯</span>
+            <span class="spot-card__title">Подбор товаров</span>
+            <span class="spot-card__desc">Анализ ниши, конкурентов, маржинальности</span>
+          </div>
+          <div class="spot-card">
+            <span class="spot-card__icon">🔽</span>
+            <span class="spot-card__title">Воронка продаж под карточку</span>
+            <span class="spot-card__desc">Анализ конкурентов + ТЗ для дизайнера карточки</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 4. КЕЙСЫ ========== -->
+    <section class="cases section" id="cases">
+      <div class="container">
+        <div class="section-label">Цифры говорят</div>
+        <h2 class="section-title">Кейсы</h2>
+        <p class="section-sub">Реальные результаты наших клиентов</p>
+        <div class="cases__grid">
+
+          <!-- TODO: заполните реальными кейсами -->
+          <div class="case-card">
+            <div class="case-card__category">Одежда · Москва</div>
+            <div class="case-card__metrics">
+              <div class="case-metric">
+                <span class="case-metric__label">Оборот</span>
+                <div class="case-metric__values">
+                  <span class="case-metric__before">320 000 ₽</span>
+                  <span class="case-metric__arrow">→</span>
+                  <span class="case-metric__after">890 000 ₽</span>
+                </div>
+              </div>
+              <div class="case-metric">
+                <span class="case-metric__label">ДРР</span>
+                <div class="case-metric__values">
+                  <span class="case-metric__before">58%</span>
+                  <span class="case-metric__arrow">→</span>
+                  <span class="case-metric__after case-metric__after--good">24%</span>
+                </div>
+              </div>
+            </div>
+            <p class="case-card__desc">TODO: краткое описание — что сделали, за какой срок</p>
+            <div class="case-card__tag">Полное ведение · 3 мес.</div>
+          </div>
+
+          <div class="case-card">
+            <div class="case-card__category">Товары для дома · Казань</div>
+            <div class="case-card__metrics">
+              <div class="case-metric">
+                <span class="case-metric__label">Оборот</span>
+                <div class="case-metric__values">
+                  <span class="case-metric__before">150 000 ₽</span>
+                  <span class="case-metric__arrow">→</span>
+                  <span class="case-metric__after">410 000 ₽</span>
+                </div>
+              </div>
+              <div class="case-metric">
+                <span class="case-metric__label">Позиция</span>
+                <div class="case-metric__values">
+                  <span class="case-metric__before">топ 80</span>
+                  <span class="case-metric__arrow">→</span>
+                  <span class="case-metric__after case-metric__after--good">топ 12</span>
+                </div>
+              </div>
+            </div>
+            <p class="case-card__desc">TODO: краткое описание — что сделали, за какой срок</p>
+            <div class="case-card__tag">SEO + Реклама · 6 нед.</div>
+          </div>
+
+          <div class="case-card">
+            <div class="case-card__category">Спортивное питание · Уфа</div>
+            <div class="case-card__metrics">
+              <div class="case-metric">
+                <span class="case-metric__label">Оборот</span>
+                <div class="case-metric__values">
+                  <span class="case-metric__before">560 000 ₽</span>
+                  <span class="case-metric__arrow">→</span>
+                  <span class="case-metric__after">1 400 000 ₽</span>
+                </div>
+              </div>
+              <div class="case-metric">
+                <span class="case-metric__label">ДРР</span>
+                <div class="case-metric__values">
+                  <span class="case-metric__before">72%</span>
+                  <span class="case-metric__arrow">→</span>
+                  <span class="case-metric__after case-metric__after--good">31%</span>
+                </div>
+              </div>
+            </div>
+            <p class="case-card__desc">TODO: краткое описание — что сделали, за какой срок</p>
+            <div class="case-card__tag">Обучение менеджера · 2 мес.</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 5. ЛОГОТИПЫ КЛИЕНТОВ ========== -->
+    <section class="clients section" id="clients">
+      <div class="container">
+        <div class="section-label">Нам доверяют</div>
+        <!-- TODO: заменить плейсхолдеры реальными логотипами -->
+        <div class="clients__logos">
+          <div class="client-logo">БРЕНД 1</div>
+          <div class="client-logo">БРЕНД 2</div>
+          <div class="client-logo">БРЕНД 3</div>
+          <div class="client-logo">БРЕНД 4</div>
+          <div class="client-logo">БРЕНД 5</div>
+          <div class="client-logo">БРЕНД 6</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 6. ОТЗЫВЫ ========== -->
+    <section class="reviews section" id="reviews">
+      <div class="container">
+        <div class="section-label">Отзывы</div>
+        <h2 class="section-title"><span class="da">ДА</span>же не сомневайся</h2>
+        <div class="reviews__grid">
+
+          <!-- TODO: заполните реальными отзывами -->
+          <div class="review-card">
+            <div class="review-card__stars">★★★★★</div>
+            <p class="review-card__text">«TODO: текст отзыва клиента. Что изменилось, какой результат получили, почему рекомендуют DA Group.»</p>
+            <div class="review-card__author">
+              <div class="review-card__avatar">АВ</div>
+              <div>
+                <div class="review-card__name">TODO: Имя Фамилия</div>
+                <div class="review-card__role">TODO: Ниша · город</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-card__stars">★★★★★</div>
+            <p class="review-card__text">«TODO: текст отзыва клиента. Что изменилось, какой результат получили, почему рекомендуют DA Group.»</p>
+            <div class="review-card__author">
+              <div class="review-card__avatar">БА</div>
+              <div>
+                <div class="review-card__name">TODO: Имя Фамилия</div>
+                <div class="review-card__role">TODO: Ниша · город</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-card__stars">★★★★★</div>
+            <p class="review-card__text">«TODO: текст отзыва клиента. Что изменилось, какой результат получили, почему рекомендуют DA Group.»</p>
+            <div class="review-card__author">
+              <div class="review-card__avatar">ИВ</div>
+              <div>
+                <div class="review-card__name">TODO: Имя Фамилия</div>
+                <div class="review-card__role">TODO: Ниша · город</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 7. КОМАНДА ========== -->
+    <section class="team section" id="team">
+      <div class="container">
+        <div class="section-label">За кадром</div>
+        <h2 class="section-title">Команда <span class="da">DA</span></h2>
+        <p class="section-sub">Два специалиста. Один фокус — ваш результат на WB.</p>
+        <div class="team__grid">
+
+          <div class="team-card">
+            <!-- TODO: заменить SVG на реальное фото <img src="..."> -->
+            <div class="team-card__photo">
+              <svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg" class="team-card__silhouette">
+                <defs>
+                  <linearGradient id="sil1" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#2a2a2a"/>
+                    <stop offset="100%" stop-color="#111"/>
+                  </linearGradient>
+                </defs>
+                <!-- Силуэт человека -->
+                <ellipse cx="100" cy="65" rx="38" ry="42" fill="#222"/>
+                <path d="M 30 240 Q 30 160 100 155 Q 170 160 170 240 Z" fill="url(#sil1)"/>
+                <circle cx="100" cy="60" r="32" fill="#2a2a2a"/>
+                <!-- Акцентная подсветка -->
+                <ellipse cx="100" cy="240" rx="70" ry="8" fill="var(--accent)" opacity="0.15"/>
+              </svg>
+            </div>
+            <div class="team-card__info">
+              <h3 class="team-card__name">Динар</h3>
+              <div class="team-card__role">Основатель · WB-стратег</div>
+              <p class="team-card__bio">TODO: 2-3 строки о специализации, опыте и ключевых экспертизах Динара.</p>
+              <div class="team-card__tags">
+                <span class="tag">Реклама</span>
+                <span class="tag">Аналитика</span>
+                <span class="tag">Стратегия</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <div class="team-card__photo">
+              <svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg" class="team-card__silhouette">
+                <defs>
+                  <linearGradient id="sil2" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#2a2a2a"/>
+                    <stop offset="100%" stop-color="#111"/>
+                  </linearGradient>
+                </defs>
+                <ellipse cx="100" cy="65" rx="38" ry="42" fill="#222"/>
+                <path d="M 30 240 Q 30 160 100 155 Q 170 160 170 240 Z" fill="url(#sil2)"/>
+                <circle cx="100" cy="60" r="32" fill="#2a2a2a"/>
+                <ellipse cx="100" cy="240" rx="70" ry="8" fill="var(--accent)" opacity="0.15"/>
+              </svg>
+            </div>
+            <div class="team-card__info">
+              <h3 class="team-card__name">Айдар</h3>
+              <div class="team-card__role">Основатель · SEO и контент</div>
+              <p class="team-card__bio">TODO: 2-3 строки о специализации, опыте и ключевых экспертизах Айдара.</p>
+              <div class="team-card__tags">
+                <span class="tag">SEO</span>
+                <span class="tag">Контент</span>
+                <span class="tag">Карточки</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 8. ФОРМА ЗАЯВКИ ========== -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <div class="contact__inner">
+          <div class="contact__text">
+            <div class="section-label">Связаться</div>
+            <h2 class="contact__title">
+              <span class="da">DA</span>вай расти.<br>Оставь заявку.
+            </h2>
+            <p class="contact__sub">
+              Расскажи о своём магазине — подберём формат работы и дадим честный ответ, можем ли помочь.
+            </p>
+            <div class="contact__tg">
+              <!-- TODO: вставить реальную ссылку на Telegram -->
+              <a href="https://t.me/YOURHANDLE" class="contact__tg-link" target="_blank" rel="noopener">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/></svg>
+                Написать напрямую в Telegram
+              </a>
+            </div>
+          </div>
+
+          <form class="contact__form" id="contactForm" novalidate>
+            <div class="form-group">
+              <label class="form-label" for="fname">Имя *</label>
+              <input class="form-input" type="text" id="fname" name="name" placeholder="Ваше имя" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="fcontact">Телефон или Telegram *</label>
+              <input class="form-input" type="text" id="fcontact" name="contact" placeholder="+7 900 000-00-00 или @username" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="fservice">Тип услуги *</label>
+              <select class="form-input form-select" id="fservice" name="service" required>
+                <option value="" disabled selected>Выберите услугу</option>
+                <optgroup label="Основные">
+                  <option value="Обучение и сопровождение менеджера">Обучение и сопровождение менеджера</option>
+                  <option value="Полное ведение магазина под ключ">Полное ведение магазина под ключ</option>
+                </optgroup>
+                <optgroup label="Точечные">
+                  <option value="Аудит магазина">Аудит магазина</option>
+                  <option value="Аудит рекламных кабинетов">Аудит рекламных кабинетов</option>
+                  <option value="Настройка рекламы">Настройка рекламы</option>
+                  <option value="SEO-оптимизация карточек">SEO-оптимизация карточек</option>
+                  <option value="Контент для карточек">Контент для карточек</option>
+                  <option value="Таблицы оцифровки">Таблицы оцифровки</option>
+                  <option value="Подбор товаров">Подбор товаров</option>
+                  <option value="Воронка продаж под карточку">Воронка продаж под карточку</option>
+                </optgroup>
+                <option value="Не определился / нужна консультация">Не определился / нужна консультация</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="fcomment">Комментарий</label>
+              <textarea class="form-input form-textarea" id="fcomment" name="comment" placeholder="Ниша, обороты, что не работает — чем больше расскажете, тем точнее ответим" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+              <span class="btn-text">Отправить заявку</span>
+              <span class="btn-spinner" hidden>Отправляем…</span>
+            </button>
+            <div class="form-status" id="formStatus" aria-live="polite"></div>
+            <p class="form-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== ФУТЕР ========== -->
+  <footer class="footer" id="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#top" class="logo logo--sm">
+          <span class="da">DA</span>&nbsp;Group
+        </a>
+        <p class="footer__tagline">Побе<span class="da">ДА</span> любит подготовку.</p>
+      </div>
+      <div class="footer__contacts">
+        <div class="footer__contact-title">Контакты</div>
+        <!-- TODO: вставить реальные контакты -->
+        <a href="https://t.me/YOURHANDLE" class="footer__link" target="_blank" rel="noopener">Telegram: @YOURHANDLE</a>
+        <a href="mailto:your@email.ru" class="footer__link">your@email.ru</a>
+      </div>
+      <div class="footer__legal">
+        <div class="footer__contact-title">Реквизиты</div>
+        <!-- TODO: вставить реальные реквизиты ИП -->
+        <p class="footer__legal-text">ИП TODO: Фамилия И.О.</p>
+        <p class="footer__legal-text">ИНН: TODO</p>
+        <p class="footer__legal-text">ОГРНИП: TODO</p>
+        <p class="footer__legal-text">г. Казань</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <span>© 2025 DA Group. Все права защищены.</span>
+        <a href="/privacy.html" class="footer__privacy">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
