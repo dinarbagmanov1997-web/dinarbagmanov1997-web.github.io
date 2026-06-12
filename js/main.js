@@ -44,8 +44,9 @@ const animateEls = document.querySelectorAll('[data-animate]');
 if (animateEls.length && 'IntersectionObserver' in window) {
   const io = new IntersectionObserver(
     (entries) => {
-      entries.forEach((entry) => {
+      entries.forEach((entry, i) => {
         if (entry.isIntersecting) {
+          // Небольшой stagger для соседних элементов
           const delay = entry.target.dataset.delay || 0;
           setTimeout(() => {
             entry.target.classList.add('is-visible');
@@ -69,7 +70,9 @@ if (form) {
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
+    // Hard guard against double-submit (race condition safety)
     if (isSubmitting) return;
+
     if (!validateForm()) return;
 
     isSubmitting = true;
@@ -168,9 +171,27 @@ function escape(str) {
   return String(str).replace(/[_*[\]()~`>#+=|{}.!-]/g, '\\$&');
 }
 
-// Очистка HTML-тегов из пользовательского ввода
+// Strip HTML tags from user input before sending
 function sanitize(str) {
   return String(str).replace(/<[^>]*>/g, '').trim().slice(0, 1000);
+}
+
+// ===== ПАРАЛЛАКС СИЛУЭТОВ =====
+const parallaxHeroes = document.querySelectorAll('.parallax-hero');
+
+if (parallaxHeroes.length) {
+  let rafId = null;
+  window.addEventListener('scroll', () => {
+    if (rafId) return;
+    rafId = requestAnimationFrame(() => {
+      const y = window.scrollY;
+      parallaxHeroes.forEach((el, i) => {
+        const speed = i === 0 ? 0.13 : 0.08;
+        el.style.transform = `translateY(${-y * speed}px)`;
+      });
+      rafId = null;
+    });
+  }, { passive: true });
 }
 
 // ===== АКТИВНЫЙ ПУНКТ НАВИГАЦИИ ПРИ СКРОЛЛЕ =====

@@ -17,6 +17,34 @@
 
   <div class="grain-overlay" aria-hidden="true"></div>
 
+  <!-- Parallax hero silhouettes -->
+  <div class="parallax-heroes" aria-hidden="true">
+    <div class="parallax-hero parallax-hero--left">
+      <svg viewBox="0 0 130 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="65" cy="34" rx="26" ry="30" fill="currentColor"/>
+        <rect x="55" y="62" width="20" height="14" rx="4" fill="currentColor"/>
+        <path d="M18 76 Q65 64 112 76 L108 190 H22 Z" fill="currentColor"/>
+        <path d="M18 76 L4 168 L20 170 L32 100" fill="currentColor"/>
+        <path d="M112 76 L126 168 L110 170 L98 100" fill="currentColor"/>
+        <path d="M22 190 L16 310 L38 310 L65 220 L92 310 L114 310 L108 190Z" fill="currentColor"/>
+        <path d="M16 310 L12 380 L40 380 L44 320" fill="currentColor"/>
+        <path d="M114 310 L118 380 L90 380 L86 320" fill="currentColor"/>
+      </svg>
+    </div>
+    <div class="parallax-hero parallax-hero--right">
+      <svg viewBox="0 0 110 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="55" cy="28" rx="22" ry="26" fill="currentColor"/>
+        <rect x="46" y="52" width="18" height="12" rx="3" fill="currentColor"/>
+        <path d="M16 64 Q55 54 94 64 L90 168 H20 Z" fill="currentColor"/>
+        <path d="M16 64 L3 148 L18 150 L28 88" fill="currentColor"/>
+        <path d="M94 64 L107 148 L92 150 L82 88" fill="currentColor"/>
+        <path d="M20 168 L15 278 L35 278 L55 198 L75 278 L95 278 L90 168Z" fill="currentColor"/>
+        <path d="M15 278 L11 340 L37 340 L41 288" fill="currentColor"/>
+        <path d="M95 278 L99 340 L73 340 L69 288" fill="currentColor"/>
+      </svg>
+    </div>
+  </div>
+
   <!-- ========== ШАПКА ========== -->
   <header class="site-header" id="top">
     <div class="container header__inner">
@@ -45,7 +73,7 @@
           <div class="badge">Агентство · Wildberries · Казань</div>
           <h1 class="hero__title" data-animate>
             Побе<span class="da">ДА</span>&nbsp;на&nbsp;Wildberries —<br>
-            это не&nbsp;удача.<br>Это система.
+            это не&nbsp;удача,<br>это система
           </h1>
           <p class="hero__sub">
             Ведём магазины под ключ и обучаем менеджеров.<br>
@@ -122,7 +150,7 @@
     <section class="pain section" id="pain">
       <div class="container">
         <div class="section-label">Узнаёшь себя?</div>
-        <h2 class="section-title">Город спит. Проблемы — нет.</h2>
+        <h2 class="section-title">Город спит — проблемы нет</h2>
         <div class="pain__grid">
 
           <div class="pain__card" data-animate data-delay="0">
@@ -548,7 +576,11 @@
                 <span class="team-card__sp-label">Супер сила</span>
                 <span class="team-card__sp-value">Системная настройка рекламы, которая работает без ежедневного пожара</span>
               </div>
-              <p class="team-card__bio">На Wildberries с 2021 года — строит рекламные связки, которые превращают показы в продажи. Там, где другие сливают бюджет, Айдар находит точку роста. Призёр всероссийской олимпиады по турецкому языку — умеет видеть закономерности там, где их не замечают.</p>
+              <ul class="team-card__facts">
+                <li>На Wildberries с&nbsp;2021 — строит рекламные связки, которые превращают показы в&nbsp;продажи</li>
+                <li>Там, где другие сливают бюджет — находит точку роста</li>
+                <li>Призёр всероссийской олимпиады по&nbsp;турецкому языку — видит закономерности там, где их&nbsp;не замечают</li>
+              </ul>
               <div class="team-card__tags">
                 <span class="tag">Реклама с 2021</span>
                 <span class="tag">АРК / ДРР</span>
@@ -579,7 +611,11 @@
                 <span class="team-card__sp-label">Супер сила</span>
                 <span class="team-card__sp-value">Визуал и воронка, которые продают ещё до клика</span>
               </div>
-              <p class="team-card__bio">IT-специалист, AI-энтузиаст и человек с насмотренностью из мировой индустрии моды — участник международных показов в роли модели. 4 года в международных продажах (French Broker) и 3 собственных проекта сформировали прагматичный взгляд: каждое решение считается, каждый пиксель работает. На WB с 2023 года, автоматизирует то, что другие делают руками.</p>
+              <ul class="team-card__facts">
+                <li>IT-специалист и&nbsp;AI-энтузиаст, насмотренность из&nbsp;мировой индустрии моды — участник международных показов</li>
+                <li>4&nbsp;года международных продаж (French Broker), 3&nbsp;собственных проекта: каждое решение считается, каждый пиксель работает</li>
+                <li>На&nbsp;WB с&nbsp;2023 — автоматизирует то, что другие делают руками</li>
+              </ul>
               <div class="team-card__tags">
                 <span class="tag">Визуал / Воронки</span>
                 <span class="tag">AI / IT</span>
@@ -624,11 +660,11 @@
           <form class="contact__form" id="contactForm" novalidate>
             <div class="form-group">
               <label class="form-label" for="fname">Имя *</label>
-              <input class="form-input" type="text" id="fname" name="name" placeholder="Ваше имя" maxlength="100" required>
+              <input class="form-input" type="text" id="fname" name="name" placeholder="Ваше имя" required maxlength="100">
             </div>
             <div class="form-group">
               <label class="form-label" for="fcontact">Телефон, Telegram, VK или Email *</label>
-              <input class="form-input" type="text" id="fcontact" name="contact" placeholder="+7 900 000-00-00 / @username / you@yandex.ru" maxlength="200" required>
+              <input class="form-input" type="text" id="fcontact" name="contact" placeholder="+7 900 000-00-00 / @username / you@yandex.ru" required maxlength="200">
             </div>
             <div class="form-group">
               <label class="form-label" for="fservice">Тип услуги *</label>
@@ -653,7 +689,7 @@
             </div>
             <div class="form-group">
               <label class="form-label" for="fcomment">Комментарий</label>
-              <textarea class="form-input form-textarea" id="fcomment" name="comment" placeholder="Ниша, обороты, что не работает — чем больше расскажете, тем точнее ответим" maxlength="1000" rows="4"></textarea>
+              <textarea class="form-input form-textarea" id="fcomment" name="comment" placeholder="Ниша, обороты, что не работает — чем больше расскажете, тем точнее ответим" rows="4" maxlength="1000"></textarea>
             </div>
             <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
               <span class="btn-text">Отправить заявку</span>
