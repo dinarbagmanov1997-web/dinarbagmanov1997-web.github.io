@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DA Group — агентство сопровождения на Wildberries</title>
+  <title>DA Agency — агентство сопровождения на Wildberries</title>
   <meta name="description" content="Ведём магазины на Wildberries под ключ и обучаем менеджеров. ДРР вниз, оборот вверх — с цифрами на руках.">
-  <meta property="og:title" content="DA Group — агентство сопровождения на Wildberries">
+  <meta property="og:title" content="DA Agency — агентство сопровождения на Wildberries">
   <meta property="og:description" content="Ведём магазины под ключ и обучаем менеджеров. ДРР вниз, оборот вверх.">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,14 +15,13 @@
 </head>
 <body>
 
-  <!-- Зернистый оверлей (нуар-эстетика) -->
   <div class="grain-overlay" aria-hidden="true"></div>
 
   <!-- ========== ШАПКА ========== -->
   <header class="site-header" id="top">
     <div class="container header__inner">
       <a href="#top" class="logo">
-        <span class="da">DA</span>&nbsp;Group
+        <span class="da">DA</span>&nbsp;Agency
       </a>
       <nav class="nav" id="nav">
         <a href="#services" class="nav__link">Услуги</a>
@@ -53,28 +52,27 @@
             ДРР вниз, оборот вверх — с цифрами на руках.
           </p>
           <div class="hero__actions">
-            <a href="#contact" class="btn btn--primary">Оставить заявку</a>
+            <a href="#contact" class="btn btn--primary btn--pulse">Оставить заявку</a>
             <a href="#services" class="btn btn--ghost">Наши услуги</a>
           </div>
           <div class="hero__stats">
-            <div class="hero__stat">
+            <div class="hero__stat" data-animate data-delay="0">
               <!-- TODO: обновить цифры -->
               <span class="hero__stat-val">47<span class="da">+</span></span>
               <span class="hero__stat-label">магазинов в работе</span>
             </div>
-            <div class="hero__stat">
+            <div class="hero__stat" data-animate data-delay="120">
               <span class="hero__stat-val">2.3<span class="da">×</span></span>
               <span class="hero__stat-label">средний рост оборота</span>
             </div>
-            <div class="hero__stat">
+            <div class="hero__stat" data-animate data-delay="240">
               <span class="hero__stat-val"><span class="da">−38%</span></span>
               <span class="hero__stat-label">снижение ДРР</span>
             </div>
           </div>
         </div>
-        <div class="hero__visual" aria-hidden="true">
+        <div class="hero__visual hero__visual--float" aria-hidden="true">
           <svg class="hero__svg" viewBox="0 0 420 480" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Декоративный абстрактный элемент: город-силуэт -->
             <defs>
               <linearGradient id="cityGrad" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.25"/>
@@ -86,7 +84,6 @@
                 <stop offset="100%" stop-color="var(--accent)" stop-opacity="0"/>
               </linearGradient>
             </defs>
-            <!-- Силуэт зданий -->
             <rect x="20" y="300" width="40" height="180" fill="#1e1e1e"/>
             <rect x="30" y="260" width="20" height="40" fill="#1e1e1e"/>
             <rect x="35" y="245" width="10" height="15" fill="#242424"/>
@@ -101,7 +98,6 @@
             <rect x="335" y="310" width="70" height="170" fill="#1e1e1e"/>
             <rect x="345" y="270" width="50" height="40" fill="#1e1e1e"/>
             <rect x="360" y="250" width="20" height="20" fill="#242424"/>
-            <!-- Окна светящиеся -->
             <rect x="195" y="220" width="8" height="8" fill="var(--accent)" opacity="0.6" rx="1"/>
             <rect x="210" y="220" width="8" height="8" fill="var(--accent)" opacity="0.3" rx="1"/>
             <rect x="225" y="220" width="8" height="8" fill="var(--accent)" opacity="0.5" rx="1"/>
@@ -111,18 +107,14 @@
             <rect x="95" y="255" width="6" height="6" fill="var(--accent)" opacity="0.2" rx="1"/>
             <rect x="290" y="270" width="6" height="6" fill="var(--accent)" opacity="0.5" rx="1"/>
             <rect x="305" y="270" width="6" height="6" fill="var(--accent)" opacity="0.3" rx="1"/>
-            <!-- Горизонтальные линии-развёртки -->
             <line x1="0" y1="390" x2="420" y2="390" stroke="url(#lineGrad)" stroke-width="0.5" opacity="0.4"/>
             <line x1="0" y1="410" x2="420" y2="410" stroke="url(#lineGrad)" stroke-width="0.3" opacity="0.2"/>
-            <!-- Акцентный луч сверху вниз -->
             <line x1="210" y1="0" x2="210" y2="155" stroke="var(--accent)" stroke-width="1" opacity="0.3"/>
             <circle cx="210" cy="0" r="3" fill="var(--accent)" opacity="0.5"/>
-            <!-- Градиент-подсветка города -->
             <rect x="0" y="200" width="420" height="280" fill="url(#cityGrad)"/>
           </svg>
         </div>
       </div>
-      <!-- Декоративная линия снизу -->
       <div class="hero__line" aria-hidden="true"></div>
     </section>
 
@@ -132,26 +124,58 @@
         <div class="section-label">Узнаёшь себя?</div>
         <h2 class="section-title">Город спит. Проблемы — нет.</h2>
         <div class="pain__grid">
+
           <div class="pain__card" data-animate data-delay="0">
-            <div class="pain__icon">📉</div>
+            <div class="pain__icon">
+              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="20" cy="20" r="14"/>
+                <path d="M20 11v2m0 14v2"/>
+                <path d="M15.5 16.5c.6-2 9.5-2 9.5 2 0 2.5-2.5 3-5 3.5s-5 2-4.5 4.5c.5 2.5 7 3.5 10 1.5"/>
+              </svg>
+            </div>
             <h3 class="pain__title">Реклама жрёт бюджет</h3>
             <p class="pain__text">АРК крутится, деньги уходят, а заказов нет. ДРР 60%+ — и непонятно, что с этим делать.</p>
           </div>
+
           <div class="pain__card" data-animate data-delay="100">
-            <div class="pain__icon">🔺</div>
+            <div class="pain__icon">
+              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="4,32 14,22 20,26 36,10"/>
+                <polyline points="26,10 36,10 36,20"/>
+                <line x1="8" y1="36" x2="32" y2="36"/>
+              </svg>
+            </div>
             <h3 class="pain__title">ДРР только растёт</h3>
             <p class="pain__text">Каждый новый запуск кампании — дороже предыдущего. Юнитка не сходится, но останавливаться страшно.</p>
           </div>
+
           <div class="pain__card" data-animate data-delay="200">
-            <div class="pain__icon">😤</div>
+            <div class="pain__icon">
+              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="16" cy="12" r="6"/>
+                <path d="M4 36c0-8 5.5-13 12-13"/>
+                <line x1="26" y1="22" x2="36" y2="32"/>
+                <line x1="36" y1="22" x2="26" y2="32"/>
+              </svg>
+            </div>
             <h3 class="pain__title">Менеджер не справляется</h3>
             <p class="pain__text">Штатный сотрудник не понимает аналитику, путается в оцифровке, не умеет работать с рекламным кабинетом.</p>
           </div>
+
           <div class="pain__card" data-animate data-delay="300">
-            <div class="pain__icon">📦</div>
+            <div class="pain__icon">
+              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="6" y="6" width="28" height="28" rx="3"/>
+                <line x1="6" y1="16" x2="34" y2="16"/>
+                <line x1="16" y1="6" x2="16" y2="16"/>
+                <polyline points="22,28 27,23 32,28"/>
+                <line x1="27" y1="23" x2="27" y2="34"/>
+              </svg>
+            </div>
             <h3 class="pain__title">Карточка не в топе</h3>
             <p class="pain__text">SEO сделано «как у всех», контент слабый, выкупы не настроены. Карточка теряется среди тысяч конкурентов.</p>
           </div>
+
         </div>
       </div>
     </section>
@@ -162,11 +186,17 @@
         <div class="section-label">Что мы делаем</div>
         <h2 class="section-title">С<span class="da">ДА</span>ём результат,<br>не отчёты</h2>
 
-        <!-- Основная вилка -->
         <div class="services__main">
-          <div class="service-card service-card--main">
+          <div class="service-card service-card--main" data-animate data-delay="0">
             <div class="service-card__badge">Старт</div>
-            <div class="service-card__icon">🎓</div>
+            <div class="service-card__icon">
+              <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 36V20l14-12 14 12v16"/>
+                <rect x="16" y="26" width="12" height="10"/>
+                <path d="M12 20v-4"/>
+                <circle cx="22" cy="10" r="2"/>
+              </svg>
+            </div>
             <h3 class="service-card__title">Обучение и сопровождение менеджера</h3>
             <p class="service-card__desc">
               Прокачиваем вашего текущего сотрудника до уровня WB-специалиста.
@@ -183,9 +213,15 @@
             <a href="#contact" class="btn btn--primary">Обсудить</a>
           </div>
 
-          <div class="service-card service-card--main service-card--featured">
+          <div class="service-card service-card--main service-card--featured" data-animate data-delay="100">
             <div class="service-card__badge service-card__badge--accent">Топ</div>
-            <div class="service-card__icon">🚀</div>
+            <div class="service-card__icon">
+              <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 4l3.5 10.5H38l-9.5 7 3.5 10.5L22 25l-10 7 3.5-10.5L6 14.5h12.5z"/>
+                <line x1="22" y1="25" x2="22" y2="40"/>
+                <line x1="14" y1="40" x2="30" y2="40"/>
+              </svg>
+            </div>
             <h3 class="service-card__title">Полное ведение магазина под ключ</h3>
             <p class="service-card__desc">
               Берём магазин в работу целиком: реклама, SEO, аналитика, контент, оцифровка,
@@ -203,51 +239,106 @@
           </div>
         </div>
 
-        <!-- Точечные услуги -->
         <div class="services__spot-label">
           <span>Точечные услуги</span>
         </div>
         <div class="services__spot">
-          <div class="spot-card">
-            <span class="spot-card__icon">🔍</span>
+
+          <div class="spot-card" data-animate data-delay="0">
+            <span class="spot-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <circle cx="11" cy="11" r="7"/>
+                <line x1="16.5" y1="16.5" x2="21" y2="21"/>
+              </svg>
+            </span>
             <span class="spot-card__title">Аудит магазина</span>
             <span class="spot-card__desc">Полный разбор текущего состояния: что тормозит рост</span>
           </div>
-          <div class="spot-card">
-            <span class="spot-card__icon">📊</span>
+
+          <div class="spot-card" data-animate data-delay="50">
+            <span class="spot-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="18" rx="2"/>
+                <polyline points="7,16 10,12 13,14 17,9"/>
+              </svg>
+            </span>
             <span class="spot-card__title">Аудит рекламных кабинетов</span>
             <span class="spot-card__desc">Разбор РК, поиск слива бюджета, рекомендации</span>
           </div>
-          <div class="spot-card">
-            <span class="spot-card__icon">⚡</span>
+
+          <div class="spot-card" data-animate data-delay="100">
+            <span class="spot-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13,2 3,14 12,14 11,22 21,10 12,10"/>
+              </svg>
+            </span>
             <span class="spot-card__title">Настройка рекламы</span>
             <span class="spot-card__desc">АРК, ставки, стратегии под вашу юнитку</span>
           </div>
-          <div class="spot-card">
-            <span class="spot-card__icon">🔤</span>
+
+          <div class="spot-card" data-animate data-delay="150">
+            <span class="spot-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <line x1="4" y1="7" x2="14" y2="7"/>
+                <line x1="4" y1="12" x2="20" y2="12"/>
+                <line x1="4" y1="17" x2="16" y2="17"/>
+                <circle cx="19" cy="7" r="3"/>
+              </svg>
+            </span>
             <span class="spot-card__title">SEO-оптимизация карточек</span>
             <span class="spot-card__desc">Заголовки, описания, ключи — чтобы карточка нашлась</span>
           </div>
-          <div class="spot-card">
-            <span class="spot-card__icon">🖼️</span>
+
+          <div class="spot-card" data-animate data-delay="0">
+            <span class="spot-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                <circle cx="8.5" cy="8.5" r="1.5"/>
+                <polyline points="21,15 16,10 5,21"/>
+              </svg>
+            </span>
             <span class="spot-card__title">Контент для карточек</span>
             <span class="spot-card__desc">ТЗ для фотографа и дизайнера, анализ конкурентов</span>
           </div>
-          <div class="spot-card">
-            <span class="spot-card__icon">📋</span>
+
+          <div class="spot-card" data-animate data-delay="50">
+            <span class="spot-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <rect x="3" y="3" width="18" height="18" rx="1"/>
+                <line x1="3" y1="9" x2="21" y2="9"/>
+                <line x1="3" y1="15" x2="21" y2="15"/>
+                <line x1="9" y1="3" x2="9" y2="21"/>
+                <line x1="15" y1="3" x2="15" y2="21"/>
+              </svg>
+            </span>
             <span class="spot-card__title">Таблицы оцифровки</span>
             <span class="spot-card__desc">Внедрение системы управленческого учёта для WB</span>
           </div>
-          <div class="spot-card">
-            <span class="spot-card__icon">🎯</span>
+
+          <div class="spot-card" data-animate data-delay="100">
+            <span class="spot-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9"/>
+                <line x1="12" y1="3" x2="12" y2="21"/>
+                <line x1="3" y1="12" x2="21" y2="12"/>
+                <path d="M12 3a18 9 0 0 1 0 18M12 3a18 9 0 0 0 0 18"/>
+              </svg>
+            </span>
             <span class="spot-card__title">Подбор товаров</span>
             <span class="spot-card__desc">Анализ ниши, конкурентов, маржинальности</span>
           </div>
-          <div class="spot-card">
-            <span class="spot-card__icon">🔽</span>
+
+          <div class="spot-card" data-animate data-delay="150">
+            <span class="spot-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 3h16l-4 8H8z"/>
+                <path d="M8 11l-2 10h12l-2-10"/>
+              </svg>
+            </span>
             <span class="spot-card__title">Воронка продаж под карточку</span>
             <span class="spot-card__desc">Анализ конкурентов + ТЗ для дизайнера карточки</span>
           </div>
+
         </div>
       </div>
     </section>
@@ -261,7 +352,7 @@
         <div class="cases__grid">
 
           <!-- TODO: заполните реальными кейсами -->
-          <div class="case-card">
+          <div class="case-card" data-animate data-delay="0">
             <div class="case-card__category">Одежда · Москва</div>
             <div class="case-card__metrics">
               <div class="case-metric">
@@ -285,7 +376,7 @@
             <div class="case-card__tag">Полное ведение · 3 мес.</div>
           </div>
 
-          <div class="case-card">
+          <div class="case-card" data-animate data-delay="100">
             <div class="case-card__category">Товары для дома · Казань</div>
             <div class="case-card__metrics">
               <div class="case-metric">
@@ -309,7 +400,7 @@
             <div class="case-card__tag">SEO + Реклама · 6 нед.</div>
           </div>
 
-          <div class="case-card">
+          <div class="case-card" data-animate data-delay="200">
             <div class="case-card__category">Спортивное питание · Уфа</div>
             <div class="case-card__metrics">
               <div class="case-metric">
@@ -337,18 +428,44 @@
       </div>
     </section>
 
-    <!-- ========== 5. ЛОГОТИПЫ КЛИЕНТОВ ========== -->
+    <!-- ========== 5. КЛИЕНТЫ ========== -->
     <section class="clients section" id="clients">
       <div class="container">
         <div class="section-label">Нам доверяют</div>
-        <!-- TODO: заменить плейсхолдеры реальными логотипами -->
+        <h2 class="section-title clients__title">Бренды, которые выбрали результат</h2>
         <div class="clients__logos">
-          <div class="client-logo">БРЕНД 1</div>
-          <div class="client-logo">БРЕНД 2</div>
-          <div class="client-logo">БРЕНД 3</div>
-          <div class="client-logo">БРЕНД 4</div>
-          <div class="client-logo">БРЕНД 5</div>
-          <div class="client-logo">БРЕНД 6</div>
+          <div class="client-logo" data-animate data-delay="0">
+            <span class="client-logo__name">TM LIMITED</span>
+            <span class="client-logo__turn">свыше 3 млрд / год</span>
+          </div>
+          <div class="client-logo" data-animate data-delay="60">
+            <span class="client-logo__name">GANZEL</span>
+            <span class="client-logo__turn">свыше 1 млрд / год</span>
+          </div>
+          <div class="client-logo" data-animate data-delay="120">
+            <span class="client-logo__name">OSSAM</span>
+            <span class="client-logo__turn">свыше 273 млн / год</span>
+          </div>
+          <div class="client-logo" data-animate data-delay="180">
+            <span class="client-logo__name">KRIS KING</span>
+            <span class="client-logo__turn">свыше 133 млн / год</span>
+          </div>
+          <div class="client-logo" data-animate data-delay="240">
+            <span class="client-logo__name">LEMORE</span>
+            <span class="client-logo__turn">свыше 130 млн / год</span>
+          </div>
+          <div class="client-logo" data-animate data-delay="300">
+            <span class="client-logo__name">PAYTA</span>
+            <span class="client-logo__turn">свыше 64 млн / год</span>
+          </div>
+          <div class="client-logo" data-animate data-delay="360">
+            <span class="client-logo__name">AVTOCRAFT / EVACRAFT</span>
+            <span class="client-logo__turn">свыше 60 млн / год</span>
+          </div>
+          <div class="client-logo" data-animate data-delay="420">
+            <span class="client-logo__name">ХАЙР 716</span>
+            <span class="client-logo__turn">свыше 20 млн / год</span>
+          </div>
         </div>
       </div>
     </section>
@@ -361,9 +478,9 @@
         <div class="reviews__grid">
 
           <!-- TODO: заполните реальными отзывами -->
-          <div class="review-card">
+          <div class="review-card" data-animate data-delay="0">
             <div class="review-card__stars">★★★★★</div>
-            <p class="review-card__text">«TODO: текст отзыва клиента. Что изменилось, какой результат получили, почему рекомендуют DA Group.»</p>
+            <p class="review-card__text">«TODO: текст отзыва клиента. Что изменилось, какой результат получили, почему рекомендуют DA Agency.»</p>
             <div class="review-card__author">
               <div class="review-card__avatar">АВ</div>
               <div>
@@ -373,9 +490,9 @@
             </div>
           </div>
 
-          <div class="review-card">
+          <div class="review-card" data-animate data-delay="100">
             <div class="review-card__stars">★★★★★</div>
-            <p class="review-card__text">«TODO: текст отзыва клиента. Что изменилось, какой результат получили, почему рекомендуют DA Group.»</p>
+            <p class="review-card__text">«TODO: текст отзыва клиента. Что изменилось, какой результат получили, почему рекомендуют DA Agency.»</p>
             <div class="review-card__author">
               <div class="review-card__avatar">БА</div>
               <div>
@@ -385,9 +502,9 @@
             </div>
           </div>
 
-          <div class="review-card">
+          <div class="review-card" data-animate data-delay="200">
             <div class="review-card__stars">★★★★★</div>
-            <p class="review-card__text">«TODO: текст отзыва клиента. Что изменилось, какой результат получили, почему рекомендуют DA Group.»</p>
+            <p class="review-card__text">«TODO: текст отзыва клиента. Что изменилось, какой результат получили, почему рекомендуют DA Agency.»</p>
             <div class="review-card__author">
               <div class="review-card__avatar">ИВ</div>
               <div>
@@ -409,7 +526,7 @@
         <p class="section-sub">Два специалиста. Один фокус — ваш результат на WB.</p>
         <div class="team__grid">
 
-          <div class="team-card">
+          <div class="team-card" data-animate data-delay="0">
             <!-- TODO: заменить SVG на реальное фото <img src="..."> -->
             <div class="team-card__photo">
               <svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg" class="team-card__silhouette">
@@ -419,27 +536,29 @@
                     <stop offset="100%" stop-color="#111"/>
                   </linearGradient>
                 </defs>
-                <!-- Силуэт человека -->
                 <ellipse cx="100" cy="65" rx="38" ry="42" fill="#222"/>
                 <path d="M 30 240 Q 30 160 100 155 Q 170 160 170 240 Z" fill="url(#sil1)"/>
                 <circle cx="100" cy="60" r="32" fill="#2a2a2a"/>
-                <!-- Акцентная подсветка -->
                 <ellipse cx="100" cy="240" rx="70" ry="8" fill="var(--accent)" opacity="0.15"/>
               </svg>
             </div>
             <div class="team-card__info">
-              <h3 class="team-card__name">Динар</h3>
-              <div class="team-card__role">Основатель · WB-стратег</div>
-              <p class="team-card__bio">TODO: 2-3 строки о специализации, опыте и ключевых экспертизах Динара.</p>
+              <h3 class="team-card__name">Айдар</h3>
+              <div class="team-card__role">Сооснователь · Рекламный архитектор</div>
+              <div class="team-card__superpower">
+                <span class="team-card__sp-label">Супер сила</span>
+                <span class="team-card__sp-value">Системная настройка рекламы, которая работает без ежедневного пожара</span>
+              </div>
+              <p class="team-card__bio">На Wildberries с 2021 года — строит рекламные связки, которые превращают показы в продажи. Там, где другие сливают бюджет, Айдар находит точку роста. Призёр всероссийской олимпиады по турецкому языку — умеет видеть закономерности там, где их не замечают.</p>
               <div class="team-card__tags">
-                <span class="tag">Реклама</span>
-                <span class="tag">Аналитика</span>
+                <span class="tag">Реклама с 2021</span>
+                <span class="tag">АРК / ДРР</span>
                 <span class="tag">Стратегия</span>
               </div>
             </div>
           </div>
 
-          <div class="team-card">
+          <div class="team-card" data-animate data-delay="150">
             <div class="team-card__photo">
               <svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg" class="team-card__silhouette">
                 <defs>
@@ -455,13 +574,17 @@
               </svg>
             </div>
             <div class="team-card__info">
-              <h3 class="team-card__name">Айдар</h3>
-              <div class="team-card__role">Основатель · SEO и контент</div>
-              <p class="team-card__bio">TODO: 2-3 строки о специализации, опыте и ключевых экспертизах Айдара.</p>
+              <h3 class="team-card__name">Динар</h3>
+              <div class="team-card__role">Сооснователь · Визуал и воронки</div>
+              <div class="team-card__superpower">
+                <span class="team-card__sp-label">Супер сила</span>
+                <span class="team-card__sp-value">Визуал и воронка, которые продают ещё до клика</span>
+              </div>
+              <p class="team-card__bio">IT-специалист, AI-энтузиаст и человек с насмотренностью из мировой индустрии моды — участник международных показов в роли модели. 4 года в международных продажах (French Broker) и 3 собственных проекта сформировали прагматичный взгляд: каждое решение считается, каждый пиксель работает. На WB с 2023 года, автоматизирует то, что другие делают руками.</p>
               <div class="team-card__tags">
-                <span class="tag">SEO</span>
-                <span class="tag">Контент</span>
-                <span class="tag">Карточки</span>
+                <span class="tag">Визуал / Воронки</span>
+                <span class="tag">AI / IT</span>
+                <span class="tag">Аналитика</span>
               </div>
             </div>
           </div>
@@ -482,11 +605,19 @@
             <p class="contact__sub">
               Расскажи о своём магазине — подберём формат работы и дадим честный ответ, можем ли помочь.
             </p>
-            <div class="contact__tg">
-              <!-- TODO: вставить реальную ссылку на Telegram -->
-              <a href="https://t.me/YOURHANDLE" class="contact__tg-link" target="_blank" rel="noopener">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/></svg>
-                Написать напрямую в Telegram
+            <div class="contact__channels">
+              <!-- TODO: вставить реальные ссылки -->
+              <a href="https://t.me/YOURHANDLE" class="contact__channel" target="_blank" rel="noopener">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/></svg>
+                Telegram
+              </a>
+              <a href="https://vk.me/YOURHANDLE" class="contact__channel" target="_blank" rel="noopener">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.954 13.404c.32.314.659.613.968.944.13.14.253.285.347.448.133.228.025.478-.179.492l-1.271.002c-.329.027-.59-.102-.808-.322-.174-.176-.335-.362-.504-.542a1.67 1.67 0 0 0-.317-.27.499.499 0 0 0-.757.195 2.908 2.908 0 0 0-.133.724c-.018.27-.096.336-.367.349-.578.025-1.126-.06-1.635-.35-.452-.258-.802-.624-1.11-1.033-.59-.773-1.04-1.63-1.443-2.519-.088-.19-.025-.293.181-.296.417-.007.834-.006 1.251-.001.168.003.279.097.344.256.23.56.505 1.092.856 1.583.094.133.19.266.325.361.148.104.261.073.331-.09.046-.105.066-.218.076-.33.034-.38.038-.759-.025-1.137-.038-.238-.173-.393-.41-.44a.814.814 0 0 0-.183-.021c-.077-.004-.053-.046-.023-.083.047-.058.119-.095.19-.12.183-.064.369-.07.558-.068l1.263.002c.241.033.295.147.327.39l.001 1.659c-.003.09.042.356.195.414.124.044.207-.06.284-.138.35-.367.598-.804.823-1.256.116-.233.216-.473.317-.713.073-.173.186-.257.378-.254l1.374.002c.04 0 .082.001.12.01.225.049.286.155.218.374-.108.341-.313.633-.518.921-.22.309-.455.606-.671.917-.198.287-.183.432.058.69z"/></svg>
+                ВКонтакте
+              </a>
+              <a href="https://max.ru/YOURHANDLE" class="contact__channel" target="_blank" rel="noopener">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l2.5 2.5L16 9"/></svg>
+                Max
               </a>
             </div>
           </div>
@@ -497,8 +628,8 @@
               <input class="form-input" type="text" id="fname" name="name" placeholder="Ваше имя" required>
             </div>
             <div class="form-group">
-              <label class="form-label" for="fcontact">Телефон или Telegram *</label>
-              <input class="form-input" type="text" id="fcontact" name="contact" placeholder="+7 900 000-00-00 или @username" required>
+              <label class="form-label" for="fcontact">Телефон, Telegram, VK или Email *</label>
+              <input class="form-input" type="text" id="fcontact" name="contact" placeholder="+7 900 000-00-00 / @username / you@yandex.ru" required>
             </div>
             <div class="form-group">
               <label class="form-label" for="fservice">Тип услуги *</label>
@@ -543,7 +674,7 @@
     <div class="container footer__inner">
       <div class="footer__brand">
         <a href="#top" class="logo logo--sm">
-          <span class="da">DA</span>&nbsp;Group
+          <span class="da">DA</span>&nbsp;Agency
         </a>
         <p class="footer__tagline">Побе<span class="da">ДА</span> любит подготовку.</p>
       </div>
@@ -551,7 +682,8 @@
         <div class="footer__contact-title">Контакты</div>
         <!-- TODO: вставить реальные контакты -->
         <a href="https://t.me/YOURHANDLE" class="footer__link" target="_blank" rel="noopener">Telegram: @YOURHANDLE</a>
-        <a href="mailto:your@email.ru" class="footer__link">your@email.ru</a>
+        <a href="https://vk.me/YOURHANDLE" class="footer__link" target="_blank" rel="noopener">ВКонтакте: @YOURHANDLE</a>
+        <a href="mailto:your@yandex.ru" class="footer__link">your@yandex.ru</a>
       </div>
       <div class="footer__legal">
         <div class="footer__contact-title">Реквизиты</div>
@@ -564,7 +696,7 @@
     </div>
     <div class="footer__bottom">
       <div class="container">
-        <span>© 2025 DA Group. Все права защищены.</span>
+        <span>© 2025 DA Agency. Все права защищены.</span>
         <a href="/privacy.html" class="footer__privacy">Политика конфиденциальности</a>
       </div>
     </div>
