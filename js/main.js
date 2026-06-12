@@ -64,21 +64,26 @@ if (animateEls.length && 'IntersectionObserver' in window) {
 const form       = document.getElementById('contactForm');
 const submitBtn  = document.getElementById('submitBtn');
 const formStatus = document.getElementById('formStatus');
+let   isSubmitting = false;
 
 if (form) {
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
+    // Hard guard against double-submit (race condition safety)
+    if (isSubmitting) return;
+
     if (!validateForm()) return;
 
+    isSubmitting = true;
     setLoading(true);
     clearStatus();
 
     const data = new FormData(form);
-    const name    = data.get('name')    || '';
-    const contact = data.get('contact') || '';
-    const service = data.get('service') || '';
-    const comment = data.get('comment') || '';
+    const name    = sanitize(data.get('name')    || '');
+    const contact = sanitize(data.get('contact') || '');
+    const service = sanitize(data.get('service') || '');
+    const comment = sanitize(data.get('comment') || '');
 
     const text = [
       `🔔 *Новая заявка — ${BRAND_NAME}*`,
@@ -90,6 +95,9 @@ if (form) {
     ].filter(Boolean).join('\n');
 
     try {
+      const controller = new AbortController();
+      const timeout    = setTimeout(() => controller.abort(), 10000);
+
       const res = await fetch(
         `https://api.telegram.org/bot${TG_TOKEN}/sendMessage`,
         {
@@ -100,9 +108,11 @@ if (form) {
             text,
             parse_mode: 'Markdown',
           }),
+          signal: controller.signal,
         }
       );
 
+      clearTimeout(timeout);
       const json = await res.json();
 
       if (json.ok) {
@@ -112,14 +122,15 @@ if (form) {
         throw new Error(json.description || 'Ошибка Telegram API');
       }
     } catch (err) {
-      console.error('Telegram send error:', err);
-      // Показываем fallback — написать напрямую
-      showStatus(
-        'error',
-        'Не удалось отправить форму. Напишите нам напрямую в Telegram — мы ответим быстро.'
-      );
+      if (err.name === 'AbortError') {
+        showStatus('error', 'Время ожидания истекло. Напишите нам напрямую — мы ответим быстро.');
+      } else {
+        console.error('Telegram send error:', err);
+        showStatus('error', 'Не удалось отправить форму. Напишите нам напрямую в Telegram — мы ответим быстро.');
+      }
     } finally {
       setLoading(false);
+      isSubmitting = false;
     }
   });
 }
@@ -158,6 +169,11 @@ function clearStatus() {
 // Безопасный escape для Markdown (Telegram)
 function escape(str) {
   return String(str).replace(/[_*[\]()~`>#+=|{}.!-]/g, '\\$&');
+}
+
+// Strip HTML tags from user input before sending
+function sanitize(str) {
+  return String(str).replace(/<[^>]*>/g, '').trim().slice(0, 1000);
 }
 
 // ===== АКТИВНЫЙ ПУНКТ НАВИГАЦИИ ПРИ СКРОЛЛЕ =====
